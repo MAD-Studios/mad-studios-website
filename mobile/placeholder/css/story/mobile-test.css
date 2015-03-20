@@ -1,0 +1,324 @@
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+/* Sections - TEST
+====================*/
+.panel img {
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: auto;
+}
+body > section {
+	display: block;
+	width: 100%; height: 100%;
+	position: fixed;
+}
+body > section div,
+body > section img {
+	display: block;
+	position: absolute;
+	top: 0; left: 0;
+	z-index: 1;
+}
+body > section > div {width: 100%; height: 100%;}
+
+/* Scene: Castle
+====================*/
+#castle-bg2 {
+	position: fixed;
+	display: block;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	-webkit-transition: all 2s;
+	-webkit-transform: scale(1);
+	-webkit-transform-origin: 75% 60%;
+}
+#castle-bg2.animate {
+	/*-webkit-animation: castleZoom 2s;*/
+	/*-webkit-animation-fill-mode: forwards;*/
+	-webkit-transform: scale(3);
+	-webkit-animation: fadeLast 0.5s;
+	-webkit-animation-fill-mode: forwards;
+	-webkit-animation-delay: 2s;
+}
+#castle-bg2 .fade {
+	opacity: 0;
+	background: #000;
+	-webkit-transition: all 2s;
+}
+#castle-bg2.animate .fade {
+	opacity: 1;
+	background: #000;
+}
+img#castle-background {
+	height: 100%;
+}
+#castle-parts {
+	
+}
+#castle-parts > img {top: auto; bottom: 0;}
+#castle-hill {
+	width: 240%;
+	margin-left: -35%;
+}
+#tentacle-02 {
+	width: 15%;
+	margin-left: 83%;
+	margin-bottom: 68%; 
+}
+#castle-castle {
+	width: 80%;
+	margin-left: 18%;
+	margin-bottom: 25%;
+}
+#tentacle-01 {
+	width: 24%;
+	margin-left: 5%;
+	margin-bottom: 38%;
+}
+#castle-shark {
+	width: 30%;
+	margin-left: 32.5%;
+	margin-bottom: 37%;
+}
+/* Scene: Xray
+====================*/
+#xray-bg2 {
+	
+}
+
+/* Scene: Lab
+====================*/
+#lab-bg2 {
+	
+}
+
+/* Scene: Creation
+====================*/
+#creation-bg2 {
+	
+}
+
+/* Scene: Gerbil
+====================*/
+#gerbil-bg2 {
+	
+}
+
+/* Scene: Gerbil
+====================*/
+#gerbil-bg2 {
+	
+}
+
+
+
+
+
+
+
+
+
+/* Sections
+====================*/
+li {
+	position: relative;
+	width: 100%; height: 100%;
+	background-color: rgba(0,0,0,0.2);
+	z-index: 0;
+	display: block;
+}
+li > div {position: absolute;}
+li .top, li .btm {width: 100%; height: 100%;}
+li .top {top: 0;}
+li .btm {bottom: 0;}
+li .btm div {
+	bottom: 0; position: absolute;
+	background-size: contain;
+}
+#orientation-alert {display: none;}
+
+
+
+
+
+/* Navigation
+====================
+nav {
+	position: relative;
+	top: 0;
+	width: 100%;
+	height: 10%;
+	display: -webkit-flex;
+	
+}
+nav > a {
+	font-family: 'The Skinny';
+	font-size: 1.5em;
+	line-height: 1.9em;
+	display: block;
+	width: 100%;
+	height: auto;
+	text-align: center;
+	background-color: #000;
+	color: #F3C343;
+	cursor: pointer;
+}
+nav > a:active {
+	color: #000;
+	background-color: #DDD;
+}
+nav > a > img {
+	display: inline;
+	margin-bottom: -5px;
+}
+nav > a#nav-home > img {width: 16%;}
+nav > a#nav-left > img,
+nav > a#nav-right > img {width: 13%; margin-bottom: -2px;}
+
+*/
+
+/* Touch Triggers
+====================*/
+#carousel {
+	position: relative;
+	width: auto;
+	height: 90%;
+	bottom: 0;
+}
+#carousel > section {
+	float: left;
+}
+
+/* Carousel Presets
+====================*/
+#carousel {
+    background: silver;
+    overflow: hidden;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translate3d(0,0,0) scale3d(1,1,1);
+    -webkit-transform-style: preserve-3d;
+}
+
+#carousel ul.animate {
+	-webkit-transition: all .3s;
+	   -moz-transition: all .3s;
+	     -o-transition: all .3s;
+	        transition: all .3s;
+}
+
+#carousel ul {
+	-webkit-transform: translate3d(0%,0,0) scale3d(1,1,1);
+	   -moz-transform: translate3d(0%,0,0) scale3d(1,1,1);
+	    -ms-transform: translate3d(0%,0,0) scale3d(1,1,1);
+	     -o-transform: translate3d(0%,0,0) scale3d(1,1,1);
+	        transform: translate3d(0%,0,0) scale3d(1,1,1);
+    overflow: hidden;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform-style: preserve-3d;
+}
+
+#carousel ul {
+    -webkit-box-shadow: 0 0 20px rgba(0,0,0,.2);
+    box-shadow: 0 0 20px rgba(0,0,0,.2);
+    position: relative;
+    height: 100%;
+}
+
+#carousel li {
+    float: left;
+    overflow: hidden;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transform: translate3d(0,0,0);
+}
+
+#carousel li h2 {
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 100%;
+    text-shadow: -1px -1px 0 rgba(0,0,0,.2);
+}
+
+/* Scenes
+====================*/
+ul.animate {
+	font-family: 'Museo Sans', Helvetica, sans-serif;
+	-webkit-transform: perspective(100);
+	-webkit-transform-style: preserve-3d;
+}
+/* ul.animate li div {outline: 1px solid fuchsia;} */
+li[data-scene] {
+	min-height: 100%;
+	height: 100%;
+	position: relative;
+}
+.text-tab {
+	position: absolute;
+	bottom: 0;
+	height: 47px;
+	padding: 0% 5%;
+	overflow: visible;
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+	   -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+	   		box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+	
+	-webkit-transition:	height 0.5s;
+	   -moz-transition:	height 0.5s;
+	    -ms-transition:	height 0.5s;
+	     -o-transition:	height 0.5s;
+	        transition: height 0.5s;
+}
+.text-tab.active {
+	height: 150px;
+}
+.text-tab .text-toggle {
+	width: 25%;
+	height: 25px;
+	margin: -8.5% 32.25% 0%;
+	position: absolute;
+	background-color: rgba(255,255,255,0.2);
+	border-radius: 5px 5px 0px 0px;
+	border-top: 1px solid #FFF;
+	z-index: 20;
+	-webkit-box-shadow: 0px -2px 3px 0px rgba(0,0,0,0.5);
+	   -moz-box-shadow: 0px -2px 3px 0px rgba(0,0,0,0.5);
+	   		box-shadow: 0px -2px 3px 0px rgba(0,0,0,0.5);
+}
+.text-tab .text-toggle img.arrow {
+	position: relative !important;
+	width: 20%;
+	margin: auto 40% -4%;
+	-webkit-transition:	-webkit-transform	0.5s;
+	   -moz-transition:	-moz-transform		0.5s;
+	    -ms-transition:	-ms-transform		0.5s;
+	     -o-transition:	-o-transform		0.5s;
+	        transition: transform			0.5s;
+}
+.text-tab.active .text-toggle img.arrow {
+	-webkit-transform:	rotate(180deg);
+	   -moz-transform:	rotate(180deg);
+	    -ms-transform:	rotate(180deg);
+	     -o-transform:	rotate(180deg);
+	        transform:	rotate(180deg);
+}
+.text-tab h3,
+.text-tab p {color: #FFF;}
+.text-tab h3 {
+	font-size: 2em;
+	padding: 3% 0%;
+}
+.text-tab p {
+	font-size: 0.65em;
+	line-height: 1.2em;
+	padding-bottom: 0.75em;
+}
+

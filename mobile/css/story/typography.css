@@ -1,0 +1,35 @@
+/* Typography
+====================*/
+@font-face {
+	font-family: 'The Skinny';
+	src: url('../../fonts/TheSkinny.eot'); /* IE9 Compat Modes */
+	src: url('../../fonts/TheSkinny.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		url('../../fonts/TheSkinny.woff') format('woff'), /* Modern Browsers */
+		url('../../fonts/TheSkinny.ttf')  format('truetype'), /* Safari, Android, iOS */
+		url('../../fonts/TheSkinny.svg#87c22f9218f03e5c9fb3c961c06669fd') format('svg'); /* Legacy iOS */
+	
+	font-style:   normal;
+	font-weight:  400;
+}
+@font-face {
+  font-family: 'The Skinny';
+  src: url('../../fonts/TheSkinny-bold.eot'); /* IE9 Compat Modes */
+  src: url('../../fonts/TheSkinny-bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../../fonts/TheSkinny-bold.woff') format('woff'), /* Modern Browsers */
+       url('../../fonts/TheSkinny-bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../../fonts/TheSkinny-bold.svg#19c04d428b2c8fb0409533f78cf63bfa') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  700;
+}
+@font-face {
+  font-family: 'Museo Sans';
+  src: url('../../fonts/MuseoSans-300.eot'); /* IE9 Compat Modes */
+  src: url('../../fonts/MuseoSans-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../../fonts/MuseoSans-300.woff') format('woff'), /* Modern Browsers */
+       url('../../fonts/MuseoSans-300.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../../fonts/MuseoSans-300.svg#19c04d428b2c8fb0409533f78cf63bfa') format('svg'); /* Legacy iOS */
+       
+    font-style:   normal;
+  	font-weight:  300;
+}

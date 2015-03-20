@@ -1,0 +1,119 @@
+// _________________________________________________________________________ MethodPaneView
+main.views.MethodPaneView = main.views.PaneView.extend({
+	CONTENT_TRANS_CLASS: "method-content-trans",
+	PREPEND_PLACEHOLDER_STR: "Example: ",
+	SUBMIT: "submit",
+	id: "method",
+	_route: "",
+	offset: 0,
+	questions: [],
+	events: {
+		'click .btn-down': 'onBtnDownClick',
+		'click .btn-ask': 'onBtnAskClick'	
+	},
+	// ----------------- initialize
+    initialize: function() {
+        console.log("MethodPaneView ---- initialize"); 
+        var self = this;
+    },
+    // ----------------- beforeRender
+    beforeRender: function() {
+        console.log("MethodPaneView ---- beforeRender");
+        var self = this;
+        setTimeout(function(){       
+	        self.model = main.router.responseGeneratorModel;
+	        self.questions = self.model.get("questions");
+	        self.setQuestionPlaceholder();
+			self.generateQuestion();
+        }, 100);
+        //choose a question
+		
+		$('#input-method', this.el).keyup(function(event){
+		    if(event.keyCode == 13){
+		        self.submit();
+		    }
+		});
+	},
+	// ----------------- beforeActivate
+    beforeActivate: function() {
+	    //animate the btn-arrow
+	},
+	// ----------------- beforeActivate
+    beforeDeactivate: function() {
+    },
+    // ----------------- beforePosize
+    beforePosize: function() {
+	    //position content to be nearly centered
+	    var _height = $(this.el).outerHeight();
+	    this.spacer_el = $('.spacer', this.el);
+	    var to_margin_top = (_height - $('.row-content', this.el).outerHeight())/2.0 + 18;
+	    $('.content', this.el).css('margin-top', to_margin_top + 'px');
+	    //make sure spacer sticks to the bottom
+	    var to_top = _height - this.spacer_el.outerHeight();
+	    this.spacer_el.css('top', to_top + 'px');
+    },
+	// ----------------- setQuestionPlaceholder
+	setQuestionPlaceholder:function(){
+		var quest = this.generateQuestion();
+		//set the input placeholder to the 
+		//generated question
+		$('#input-method', this.el).attr('placeholder', this.PREPEND_PLACEHOLDER_STR + quest);
+	},
+	// ----------------- generateQuestion
+	generateQuestion:function(){
+		//generate a random number
+		//between 0 and num questions
+		var rand = Math.floor(Math.random()*this.questions.length);
+		this.model.set({currentQuestion: rand});
+		return this.questions[rand];
+	},
+	// ----------------- submit
+	submit:function(){
+        //un focus the input
+        //so that the keyboard closes
+        $('#input-method', this.el).blur();
+		// send them into 
+		//the story
+		$(this.el).trigger(this.SUBMIT);
+	},
+	// ----------------- beginHide
+    beginHide: function() {
+	    var self = this;
+	    var content_arr = [ $('.btn-arrow-container', this.el),
+						    $('.shadow-bordered-blue', this.el),
+						    $('.input-container', this.el),
+						    $('h3', this.el),
+						    $('h1', this.el) ];
+		var content_el, delay;
+		for(var i=0;i<content_arr.length;i++){
+		    content_el = content_arr[i];
+		    content_el.addClass(this.CONTENT_TRANS_CLASS);
+		    delay = i*100;
+		   
+		    this.hideContent(content_el, delay);
+	    }
+	    setTimeout(function(){
+		    self.spacer_el.addClass(self.CONTENT_TRANS_CLASS);
+		    self.spacer_el.css('top', $(self.el).outerHeight() + 'px')
+	    }, 600);
+    },
+    // ----------------- hideContent
+	hideContent: function(el, delay){
+		var self = this;
+		setTimeout(function(){
+			el.css('top', $(self.el).outerHeight() + 'px');
+		}, delay);
+	},
+	// ----------------- onBtnDownClick
+	onBtnDownClick: function(){
+		if (Modernizr.history) main.router.navigate('', {trigger: false});
+		main.router.navigate('how', {trigger: true});
+		return false;
+	},
+	// ----------------- onBtnAskClick
+	onBtnAskClick: function(){
+		this.submit();
+		return false;
+	}
+	
+});

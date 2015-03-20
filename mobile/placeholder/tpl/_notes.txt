@@ -1,0 +1,10 @@
+/*
+	MAD STUDIOS - Mobile Web - Wormhole
+*/
+
+I'm adding all my site files for mobile in the 'm' folder. Just in case you're looking for paths.
+
+
+The following files are dom elements go at the end of the document.
+'orientation-alert.html'
+'swipe-instruction.html'

@@ -1,0 +1,71 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	background-color: #E6E6E6;
+	font-family: "Helvetica Neue", sans-serif;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin: 0px;
+	padding: 0px;
+}
+table {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+#container {
+	background-color: #FFF;
+	height: 800px;
+	width: 320px;
+	float: left;
+	display: block;
+}
+#container #header {
+	/*background-color: #FC0;*/
+	position: fixed;
+	top: 0px;
+	width: 320px;
+	height: 60px;
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+	vertical-align: middle;
+	z-index: 200;
+}
+#container .main {
+	background-color: #FFE6A0;
+	background-image:url(img/screen.png);
+	height: 648px;
+	width: 320px;
+	margin: 60px 0;
+}
+.loaded {
+	margin: 0;
+	padding: 0;
+}
+.btn {
+	position: relative;
+	background-image : url(img/checker.png);
+	width: 50px;
+	height: 50px;
+	z-index: 100;
+}
+#container .footer {
+	background-color: #FC0;
+	position: fixed;
+	width: 320px;
+	height: 60px;
+	margin: 0px;
+	padding: 0px;
+	bottom: 0px;
+	text-align: center;
+	vertical-align: middle;
+	z-index: 200;
+}
+#notes_slide {
+	display: block;
+	float: left;
+	max-width: 320px;
+	padding-left: 20px;
+	padding-top: 60px;
+}
